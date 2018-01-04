@@ -1,0 +1,27 @@
+{
+  "name": "promise-ftps",
+  "version": "0.0.1",
+  "description": "Promise Ftps",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dottgonzo/promise-ftps.git"
+  },
+  "keywords": [
+    "ftps",
+    "promise"
+  ],
+  "author": "Dario Caruso",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dottgonzo/promise-ftps/issues"
+  },
+  "homepage": "https://github.com/dottgonzo/promise-ftps#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ftps": "^1.1.0"
+  }
+}
