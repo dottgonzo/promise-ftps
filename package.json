@@ -4,7 +4,8 @@
   "description": "Promise Ftps",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "npx mocha",
+    "build": "npx tsc"
   },
   "repository": {
     "type": "git",
