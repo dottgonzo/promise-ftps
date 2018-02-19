@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const ftps = require("ftps");
-class FtpsMan extends ftps {
+class SFtpMan extends ftps {
     constructor(ftpsManConfig) {
         const ftpsConfig = {
             host: ftpsManConfig.host,
@@ -12,7 +12,7 @@ class FtpsMan extends ftps {
         super(ftpsConfig);
     }
 }
-exports.FtpsMan = FtpsMan;
+exports.SFtpMan = SFtpMan;
 class FtpMan extends ftps {
     constructor(ftpManConfig) {
         const ftpConfig = {

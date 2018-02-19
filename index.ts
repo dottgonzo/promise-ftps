@@ -41,7 +41,7 @@ export interface IFtpClassConf {
 }
 
 
-export class FtpsMan extends ftps {
+export class SFtpMan extends ftps {
 
   constructor(ftpsManConfig: IFtpsClassConf) {
 
