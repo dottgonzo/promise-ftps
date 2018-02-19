@@ -41,12 +41,27 @@ export interface IFtpClassConf {
 }
 
 
-export class SFtpMan extends ftps {
+export class FtpManMethods extends ftps {
+  constructor(opts: IFtpsDepConf) {
+    super(opts)
+  }
+  promisedGet(source, destination) {
+    const that = this
+    return new Promise((resolve, reject) => {
+      super.get(source, destination).exec((err, res) => {
+        if (err) return reject(err)
+        if (!res) return reject('no answer')
+        if (res.error) return reject(res.error)
+        resolve(res.data)
+      })
+    })
+  }
+}
+
+
+export class SFtpMan extends FtpManMethods {
 
   constructor(ftpsManConfig: IFtpsClassConf) {
-
-
-
 
     const ftpsConfig: IFtpsDepConf = {
       host: ftpsManConfig.host,
@@ -59,20 +74,14 @@ export class SFtpMan extends ftps {
     super(ftpsConfig)
   }
 
-
-
 }
 
 
 
 
-
-
-export class FtpMan extends ftps {
+export class FtpMan extends FtpManMethods {
 
   constructor(ftpManConfig: IFtpClassConf) {
-
-
 
     const ftpConfig: IFtpsDepConf = {
       host: ftpManConfig.host,
